@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="style.css" type="text/css"/>
+   <script src="jquery.js">  </script>
+
+   <title> Player audio jquerry</title>
+ </head>
+ <body>
+   <audio id="Psycho" preload="auto" src="./Psycho.mp3"></audio>
+         <audio id="Schubert" preload="auto" src="./Schuber.mp3"></audio>
+
+      <label for="nom"/>Quel est votre nom</label><br>
+         <input type="text" id="nom"/><br>
+
+             <label for="age">Quel est votre age? </label><br>
+         <input type="number" id="age"/><br>
+      <button id="confirm">Confirm</button>
+
+  <p id="reponse"></p>
+  <!-- <form><imput type="date" value= "votre age"> -->
+<script>
+
+$("#confirm").click(function(){
+
+            var Name = $("#nom").val();
+            var Age = $("#age").val();
+            var texte = ("bonjour " + Name + "!");
+
+           // $("#reponse").innerHTML = texte;//la fonction jquery pour inserer du texte dans une div
+           $( "#reponse" ).append( texte );
+
+ var player = document.querySelector((age<18) ? "#Schubert" : "#Psycho");
+ player.play();
+});
+
+
+ </script>
+ </body>
+</html>
